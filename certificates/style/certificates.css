@@ -1,0 +1,81 @@
+/* Certificates section */
+.certificates{
+    padding: 80px 9% 120px 9%;
+    color: #fff;
+    background: #000;
+}
+
+.certificates-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.certificate-card{
+    background: #1b2028;
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 77, 77, 0.2);
+    border-color: rgba(255, 77, 77, 0.5);
+}
+
+.certificate-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.certificate-header h3{
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.certificate-badge{
+    color: #ff4d4d;
+    font-size: 32px;
+}
+
+.certificate-issuer{
+    color: #ff4d4d;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.certificate-date{
+    color: #d4d4d4;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.certificate-actions{
+    margin-top: 16px;
+}
+
+.certificate-link{
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+    font-size: 14px;
+}
+
+.certificate-link:hover{
+    color: red;
+}
+
+.certificate-link i{
+    font-size: 16px;
+}
+

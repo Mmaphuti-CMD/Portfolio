@@ -1,0 +1,745 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #000;
+}
+
+.nav-container{
+    height: 70px;
+    padding: none;
+    margin: none;
+    width: 100%
+}
+
+.nav-container h1{
+    position: absolute;
+    left: 15px;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+.nav-container h1 a{
+    color: red !important;
+    transition: color 0.3s ease;
+}
+
+.nav-container .hlinks-container{
+    position: absolute;
+    right: 5px;
+}
+
+.nav-container .hlinks-container ul{
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-container .hlinks-container ul li{
+    display: inline-block;
+    padding: 7px;
+}
+
+.nav-container .hlinks-container ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Make Home link red on all pages except home page */
+.nav-container .hlinks-container ul li a[href="../index.html"]{
+    color: red;
+}
+
+/* Active page link stays red - for all pages except Home - MUST come after other rules */
+.nav-container .hlinks-container ul li a.active{
+    color: red !important;
+}
+
+.nav-container .hlinks-container ul li a.active:hover{
+    color: red !important;
+}
+
+.nav-container .hlinks-container ul li a.active:focus{
+    color: red !important;
+}
+
+.nav-container .hlinks-container ul li a.active:visited{
+    color: red !important;
+}
+
+/* Hover effect for non-active links (except Home) - partial red with smooth transition */
+.nav-container .hlinks-container ul li a:not(.active):not([href="index.html"]):not([href="../index.html"]):hover{
+    color: rgba(255, 77, 77, 0.7);
+}
+
+/* Force active links to be red - highest priority rule */
+body .nav-container .hlinks-container ul li a.active {
+    color: red !important;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0 9%;
+    color: #fff;
+    overflow: auto;
+}
+
+.home .home-container .home-info{
+    margin-bottom: 13px;
+}
+
+.home .home-container .home-info h1{
+    font-size: 43px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home .home-container .home-info h2{
+    font-size: 33;
+    margin-top: -30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home .home-container .home-info p{
+    font-size: 15px;
+    font-weight: none;
+    margin: 10px 0 25px 0;
+}
+
+.home .home-container .btn-sci{
+    display: flex;
+    align-items: center;
+}
+
+.home .home-container .btn-sci .btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    background: red;
+    border: 1px solid red;
+    border-radius: 50px;
+    box-shadow: 0 0 10px red;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    transition: .5s;
+}
+
+.home .home-container .btn-sci .btn:hover{
+    background: transparent;
+    color: red;
+    box-shadow: none;
+}
+
+.home .home-container .btn-sci .sci{
+    margin-left: 30px;
+}
+
+.home .home-container .btn-sci .sci a{
+    display: inline-flex;
+    text-decoration: none;
+    padding: 8px;
+    border: 1px solid red;
+    border-radius: 50%;
+    color: red;
+    font-size: 20px;
+    margin: 0 8px;
+    transition: .5s;
+}
+
+.home .home-container .btn-sci .sci a:hover{
+    background: red;
+    color: #000;
+    box-shadow: 0 0 10px red;
+}
+
+.home-img{
+  margin-left: 60px;
+}
+
+.home-img .img-box{
+  width: 32vw;
+  height: 32vw;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.home-img .img-box .img-item{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home-img .img-box .img-item img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* About section */
+.about{
+    padding: 80px 9% 120px 9%;
+    color: #fff;
+    background: #000;
+}
+
+.section-title{
+    max-width: 760px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.section-title .eyebrow{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ff4d4d;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.section-title h2{
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title .section-subtitle{
+    color: #c7c7c7;
+    font-size: 15px;
+}
+
+.about-content{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text p{
+    margin-bottom: 16px;
+    color: #d4d4d4;
+    line-height: 1.6;
+}
+
+.about-highlights{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin: 20px 0 24px;
+}
+
+.highlight-card{
+    border: 1px solid rgba(255, 77, 77, 0.35);
+    border-radius: 12px;
+    padding: 14px 16px;
+    background: rgba(255, 77, 77, 0.05);
+}
+
+.highlight-label{
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ff4d4d;
+    margin-bottom: 6px;
+}
+
+.highlight-value{
+    font-weight: 600;
+}
+
+.about-actions{
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.about-actions .btn{
+    background: red;
+    color: #000;
+    border: 1px solid red;
+    box-shadow: 0 0 10px red;
+}
+
+.about-actions .btn:hover{
+    background: transparent;
+    color: red;
+    box-shadow: none;
+}
+
+.about-actions .btn.ghost{
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: none;
+}
+
+.about-actions .btn.ghost:hover{
+    color: red;
+    border-color: red;
+}
+
+.about-figure{
+    display: flex;
+    justify-content: center;
+}
+
+.figure-frame{
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 4 / 5;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 77, 77, 0.35);
+    box-shadow: 0 0 20px rgba(255, 77, 77, 0.2);
+}
+
+.figure-frame img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Projects section */
+.projects{
+    padding: 80px 9% 120px 9%;
+    color: #fff;
+    background: #000;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.project-card{
+    background: #1b2028;
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 77, 77, 0.2);
+    border-color: rgba(255, 77, 77, 0.5);
+}
+
+.project-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.project-header h3{
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.project-links{
+    display: flex;
+    gap: 8px;
+}
+
+.project-link{
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.project-link:hover{
+    color: red;
+}
+
+.project-description{
+    color: #d4d4d4;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.project-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag{
+    background: rgba(255, 77, 77, 0.1);
+    border: 1px solid rgba(255, 77, 77, 0.3);
+    color: #ff4d4d;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Experience section */
+.experience{
+    padding: 80px 9% 120px 9%;
+    color: #fff;
+    background: #000;
+}
+
+.timeline{
+    max-width: 800px;
+    margin: 40px auto 0;
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255, 77, 77, 0.3);
+}
+
+.timeline-item{
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-dot{
+    position: absolute;
+    left: -46px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: red;
+    box-shadow: 0 0 10px red;
+}
+
+.timeline-content{
+    background: #1f242d;
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.timeline-content h3{
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timeline-date{
+    display: block;
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.timeline-content p{
+    color: #d4d4d4;
+    line-height: 1.6;
+}
+
+/* Skills section */
+.skills{
+    padding: 80px 9% 120px 9%;
+    color: #fff;
+    background: #000;
+}
+
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.skills-category{
+    background: #1b2028;
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.skills-category h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.skill-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    background: rgba(255, 77, 77, 0.05);
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.skill-item:hover{
+    background: rgba(255, 77, 77, 0.1);
+    border-color: rgba(255, 77, 77, 0.5);
+    transform: translateY(-3px);
+}
+
+.skill-item i{
+    font-size: 32px;
+    color: #ff4d4d;
+}
+
+.skill-item span{
+    font-size: 14px;
+    color: #d4d4d4;
+}
+
+/* Footer */
+.footer{
+    background: #000;
+    padding: 40px 9%;
+    text-align: center;
+    color: #d4d4d4;
+    border-top: 2px solid rgba(255, 79, 79, 0.2);
+}
+
+.footer-links{
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.footer-links a{
+    color: #d4d4d4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover{
+    color: red;
+}
+
+/* Smooth scrolling */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navigation fixes */
+.nav-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 15px 0 20px 0;
+    border-bottom: 2px solid rgba(255, 79, 79, 0.2);
+}
+
+body{
+    padding-top: 70px;
+}
+
+/* Page section styling */
+.page-section{
+    padding: 100px 9% 120px 9%;
+    min-height: calc(100vh - 60px);
+}
+
+/* Contact section */
+.contact{
+    padding: 100px 9% 120px 9%;
+    color: #fff;
+    background: #000;
+    min-height: calc(100vh - 60px);
+}
+
+.contact-content-wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.contact-info-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-info-card{
+    background: #1b2028;
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s;
+}
+
+.contact-info-card:hover{
+    transform: translateY(-5px);
+    border-color: rgba(255, 77, 77, 0.5);
+    box-shadow: 0 10px 30px rgba(255, 77, 77, 0.2);
+}
+
+.contact-icon-wrapper{
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.contact-icon-wrapper i{
+    font-size: 24px;
+    color: #000;
+}
+
+.contact-info-card h3{
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-info-card p{
+    color: #d4d4d4;
+    font-size: 14px;
+}
+
+.contact-form-section{
+    background: #1b2028;
+    border: 1px solid rgba(255, 77, 77, 0.2);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label{
+    color: #ff4d4d;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea{
+    background: #1f242d;
+    border: 1px solid rgba(255, 77, 77, 0.3);
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    outline: none;
+    border-color: red;
+    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.1);
+}
+
+.form-group textarea{
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-submit-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.contact-submit-btn i{
+    font-size: 18px;
+}
+
+@media (max-width: 900px){
+    .about-content{
+        grid-template-columns: 1fr;
+    }
+    .about{
+        padding: 60px 7%;
+    }
+    .projects-grid{
+        grid-template-columns: 1fr;
+    }
+    .skills-container{
+        grid-template-columns: 1fr;
+    }
+    .timeline{
+        padding-left: 30px;
+    }
+    .nav-container .hlinks-container ul{
+        font-size: 14px;
+    }
+    .nav-container .hlinks-container ul li{
+        padding: 5px;
+    }
+    .home{
+        flex-direction: column;
+        padding: 80px 7% 40px 7%;
+    }
+    .home-img{
+        margin-top: 40px;
+    }
+    .home-img .img-box{
+        width: 50vw;
+        height: 50vw;
+    }
+    .contact-content-wrapper{
+        grid-template-columns: 1fr;
+    }
+}

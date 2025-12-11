@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mathematical achievements and interactive calculus visualizations by Mmaphuti Madiope">
+  <title>Mathematics - Mmaphuti Madiope</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../style/style.css" />
+  <link rel="stylesheet" type="text/css" href="style/mathematics.css" />
+</head>
+
+<body>
+  <div class="nav-container">
+    <h1><a href="../index.html" style="text-decoration: none; color: #fff;">Mmaphuti</a></h1>
+
+    <div class="hlinks-container">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../projects/project.html">Projects</a></li>
+        <li><a href="../experience/experience.html">Experience</a></li>
+        <li><a href="mathematics.html" class="active">Mathematics</a></li>
+        <li><a href="../certificates/certificates.html">Certificates</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="mathematics page-section">
+    <div class="section-title">
+      <p class="eyebrow">Mathematics</p>
+      <h2>Mathematical Excellence</h2>
+      <p class="section-subtitle">
+        Top-ranked performance in Pure and Applied Mathematics with a passion for Advanced-Calculus and Mathematical geometry & analysis.
+      </p>
+    </div>
+
+    <div class="achievements-section">
+      <div class="achievement-card">
+        <div class="achievement-icon">
+          <i class="bx bx-trophy"></i>
+        </div>
+        <h3>Top 2 in Matric</h3>
+        <p class="achievement-subject">Pure Mathematics</p>
+        <p class="achievement-desc">Ranked 2nd in Pure Mathematics during matriculation, demonstrating exceptional
+          problem-solving abilities and mathematical reasoning.</p>
+      </div>
+
+      <div class="achievement-card">
+        <div class="achievement-icon">
+          <i class="bx bx-award"></i>
+        </div>
+        <h3>Top 5 in Second Year</h3>
+        <p class="achievement-subject">Advanced Calculus 3</p>
+        <p class="achievement-desc">Achieved top 5 ranking in Applied Mathematics for Advanced Calculus 3, showcasing
+          mastery of complex mathematical concepts and analytical thinking.</p>
+      </div>
+
+      <div class="achievement-card">
+        <div class="achievement-icon">
+          <i class="bx bx-math"></i>
+        </div>
+        <h3>Mathematical Sciences Graduate</h3>
+        <p class="achievement-subject">Applied Mathematics</p>
+        <p class="achievement-desc">Graduated with a degree in Mathematical Sciences, specializing in applied
+          mathematics, algorithms, and computational methods.</p>
+      </div>
+    </div>
+
+    <div class="distance-calculators-section">
+      <div class="section-title">
+        <p class="eyebrow">Distance Models</p>
+        <h2>Euclidean & Haversine Distance Calculators</h2>
+        <h4 class="distance-intro">Calculate distances in two ways</h4>
+        <p class="distance-description">Using both methods helps
+          create more accurate and realistic routes for vehicles and improves how optimisation systems make planning
+          decisions like vehicle allocation and route planning for bus system - "(Hybrid CVRPTWTC Bus Allocation System)".
+        </p>
+
+        <div class="distance-definitions">
+          <dl>
+            <dt>Euclidean distance</dt>
+            <dd>Measures straight-line distance on a flat map.</dd>
+            <dt>Haversine formula</dt>
+            <dd>Measures distance on the curved surface of the Earth.</dd> 
+          </dl>
+        </div>
+      </div>
+
+      <div class="distance-calculators-grid">
+        <!-- Euclidean Distance Calculator -->
+        <div class="calculator-card">
+          <h3>Euclidean Distance</h3>
+          <p class="calc-description">Calculate straight-line distance between two points in 2D or 3D space</p>
+          <p class="use-case euclidean-story">
+            <strong>Personal Connection:</strong> Ranked Top 2 in Matric Pure Mathematics with a deep passion for
+            Euclidean Geometry. I often taught my teachers, explaining complex geometric relationships and proofs. This
+            foundational love connects to Euclidean distance calculations—the bridge between geometric principles and
+            computational applications.
+          </p>
+          <div class="distance-controls">
+            <div class="point-input">
+              <label>Point A:</label>
+              <input type="number" id="euclidean-x1" placeholder="X₁" value="0" step="0.1">
+              <input type="number" id="euclidean-y1" placeholder="Y₁" value="0" step="0.1">
+              <input type="number" id="euclidean-z1" placeholder="Z₁ (optional)" value="0" step="0.1">
+            </div>
+            <div class="point-input">
+              <label>Point B:</label>
+              <input type="number" id="euclidean-x2" placeholder="X₂" value="3" step="0.1">
+              <input type="number" id="euclidean-y2" placeholder="Y₂" value="4" step="0.1">
+              <input type="number" id="euclidean-z2" placeholder="Z₂ (optional)" value="0" step="0.1">
+            </div>
+            <button id="calc-euclidean" class="btn calc-btn">Calculate Distance</button>
+            <div class="result-display" id="euclidean-result">
+              <span class="result-label">Distance:</span>
+              <span class="result-value">5.00 units</span>
+            </div>
+            <div class="formula-display">
+              <strong>Formula:</strong>
+              <p>2D: d = √[(x₂-x₁)² + (y₂-y₁)²]</p>
+              <p>3D: d = √[(x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²]</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Haversine Distance Calculator -->
+        <div class="calculator-card advanced">
+          <a href="../document/SMK Haversine Calculations.pdf" target="_blank" class="smk-proof-badge">SMK-Proof</a>
+          <div class="advanced-badge">Advanced</div>
+          <h3>Haversine Distance</h3>
+          <p class="calc-description">Calculate great-circle distance between two points on Earth's surface</p>
+          <p class="use-case"><strong>Use Case:</strong> Solely engineering the Hybrid CVRPTWTC Bus Allocation System at
+            BigSMS Pty Ltd. Utilizing Haversine distance calculations to compute accurate Earth-surface distances
+            between bus stops, enabling optimal route planning with capacity constraints, time windows, and travel time
+            optimization for efficient bus fleet management.</p>
+
+          <div class="haversine-tabs">
+            <button class="tab-btn active" data-tab="simple">Simple Calculator</button>
+            <button class="tab-btn" data-tab="advanced">Bus Routing Scenario</button>
+          </div>
+
+          <!-- Simple Haversine -->
+          <div class="tab-content active" id="tab-simple">
+            <div class="distance-controls">
+              <div class="point-input">
+                <label>Location A (Latitude, Longitude):</label>
+                <input type="number" id="haversine-lat1" placeholder="Latitude 1" value="-26.2041" step="0.0001">
+                <input type="number" id="haversine-lon1" placeholder="Longitude 1" value="28.0473" step="0.0001">
+              </div>
+              <div class="point-input">
+                <label>Location B (Latitude, Longitude):</label>
+                <input type="number" id="haversine-lat2" placeholder="Latitude 2" value="-33.9249" step="0.0001">
+                <input type="number" id="haversine-lon2" placeholder="Longitude 2" value="18.4241" step="0.0001">
+              </div>
+              <div class="quick-locations">
+                <span>Quick Examples:</span>
+                <button class="quick-btn" data-loc="jhb-cpt">Johannesburg → Cape Town</button>
+                <button class="quick-btn" data-loc="jhb-dbn">Johannesburg → Durban</button>
+                <button class="quick-btn" data-loc="cpt-dbn">Cape Town → Durban</button>
+              </div>
+              <button id="calc-haversine" class="btn calc-btn">Calculate Distance</button>
+              <div class="result-display" id="haversine-result">
+                <span class="result-label">Distance:</span>
+                <span class="result-value">0 km</span>
+              </div>
+              <div class="formula-display">
+                <strong>Haversine Formula:</strong>
+                <p>a = sin²(Δφ/2) + cos(φ₁)·cos(φ₂)·sin²(Δλ/2)</p>
+                <p>c = 2·atan2(√a, √(1−a))</p>
+                <p>d = R·c (where R = Earth's radius ≈ 6,371 km)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Advanced Bus Routing Scenario -->
+          <div class="tab-content" id="tab-advanced">
+            <div class="routing-scenario">
+              <h4>Bus Stop Routing Optimization</h4>
+              <p class="scenario-desc">This demonstrates the Haversine distance calculation used in the Hybrid CVRPTWTC
+                Bus Allocation System for optimizing bus routes between multiple stops.</p>
+
+              <div class="stops-container">
+                <div class="time-window-info">
+                  <p><strong>Time Window (TW Start/TW End):</strong> Measured in minutes from midnight (0-1440). For example: 0 = 00:00 AM (midnight), 480 = 8:00 AM, 960 = 4:00 PM, 1440 = 12:00 AM (next day).</p>
+                </div>
+                <div class="stops-list" id="stops-list">
+                  <div class="stop-item depot-stop">
+                    <span class="stop-number">1</span>
+                    <input type="text" class="stop-name" placeholder="Stop Name" value="Depot">
+                    <input type="number" class="stop-lat" placeholder="Lat" value="-26.2041" step="0.0001">
+                    <input type="number" class="stop-lon" placeholder="Lon" value="28.0473" step="0.0001">
+                    <button class="remove-stop">×</button>
+                  </div>
+                </div>
+                <button id="add-stop" class="btn add-stop-btn">+ Add Stop</button>
+              </div>
+
+              <div class="routing-controls-info">
+                <p><strong>Average Speed (km/h):</strong> The average traveling speed of the bus, used to convert distances (calculated via Haversine formula) into travel times for route optimization.</p>
+              </div>
+              <div class="routing-controls">
+                <label>
+                  <input type="number" id="avg-speed" value="60" min="1" placeholder="Avg Speed">
+                  Average Speed (km/h)
+                </label>
+                <button id="calculate-route" class="btn calc-btn">Optimize Route</button>
+              </div>
+
+              <div class="route-results" id="route-results">
+                <div class="distance-matrix" id="distance-matrix"></div>
+                <div class="route-summary" id="route-summary"></div>
+              </div>
+
+              <div class="explanation-box">
+                <h5>CVRPTWTC Application:</h5>
+                <ul>
+                  <li><strong>C</strong>apacitated: Each bus has limited passenger capacity</li>
+                  <li><strong>V</strong>ehicle <strong>R</strong>outing <strong>P</strong>roblem: Find optimal routes
+                    for multiple buses</li>
+                  <li><strong>T</strong>ime <strong>W</strong>indows: Each stop has service time constraints</li>
+                  <li><strong>T</strong>ime <strong>C</strong>onstraints: Total route time must be within limits</li>
+                </ul>
+                <p><strong>Haversine distance</strong> is used to calculate accurate travel distances between bus stops
+                  on Earth's surface, which is then converted to travel time for route optimization.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 Mmaphuti Madiope. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="../about/about.html">About</a>
+      <a href="mathematics.html">Mathematics</a>
+      <a href="../contact/contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="../script/script.js"></script>
+  <script src="script/mathematics.js"></script>
+</body>
+
+</html>
+
