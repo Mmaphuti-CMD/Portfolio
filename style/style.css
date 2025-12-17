@@ -1,8 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+.nav-container .hlinks-container ul li a,
+.nav-container .hlinks-container ul li a:visited {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Always keep Home red regardless of path quirks (Netlify root `/` etc.) */
+.nav-container .hlinks-container ul li a[href="index.html"],
+.nav-container .hlinks-container ul li a[href="./"],
+.nav-container .hlinks-container ul li a[href="/"],
+.nav-container .hlinks-container ul li a[href="/index.html"],
+.nav-container .hlinks-container ul li a[href="../index.html"],
+.nav-container .hlinks-container ul li a.active {
+    color: red !important;
+}
+
+.nav-container .hlinks-container ul li a.active:hover,
+.nav-container .hlinks-container ul li a.active:focus,
+.nav-container .hlinks-container ul li a.active:visited {
+    color: red !important;
+}
+
+/* Hover effect for non-active links (except Home) - partial red with smooth transition */
+.nav-container .hlinks-container ul li a:not(.active):not([href="index.html"]):not([href="./"]):not([href="/"]):not([href="/index.html"]):not([href="../index.html"]):hover{
+    color: rgba(255, 77, 77, 0.7);
+}
+
+/* Force active links to be red - highest priority rule */
+body .nav-container .hlinks-container ul li a.active {
+    color: red !important;
+}
+
 * {
-    margin: none;
-    padding: none;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
@@ -46,45 +80,6 @@ body{
 .nav-container .hlinks-container ul li{
     display: inline-block;
     padding: 7px;
-}
-
-.nav-container .hlinks-container ul li a{
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Make Home link red on all pages except home page */
-.nav-container .hlinks-container ul li a[href="../index.html"]{
-    color: red;
-}
-
-/* Active page link stays red - for all pages except Home - MUST come after other rules */
-.nav-container .hlinks-container ul li a.active{
-    color: red !important;
-}
-
-.nav-container .hlinks-container ul li a.active:hover{
-    color: red !important;
-}
-
-.nav-container .hlinks-container ul li a.active:focus{
-    color: red !important;
-}
-
-.nav-container .hlinks-container ul li a.active:visited{
-    color: red !important;
-}
-
-/* Hover effect for non-active links (except Home) - partial red with smooth transition */
-.nav-container .hlinks-container ul li a:not(.active):not([href="index.html"]):not([href="../index.html"]):hover{
-    color: rgba(255, 77, 77, 0.7);
-}
-
-/* Force active links to be red - highest priority rule */
-body .nav-container .hlinks-container ul li a.active {
-    color: red !important;
 }
 
 .home{
