@@ -5,6 +5,26 @@
     background: #000;
 }
 
+.udemy-accredited{
+    color: red;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.programming-hub-accredited{
+    color: red;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
 .certificates-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

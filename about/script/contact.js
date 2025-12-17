@@ -1,4 +1,4 @@
-// Contact Form Handler
+// Contact Form Handler - Using mailto method (pure frontend)
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
@@ -27,27 +27,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Send data to backend API
             const submitBtn = contactForm.querySelector('.submit-btn');
             const originalText = submitBtn.innerHTML;
             
             // Show loading state
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing...';
             submitBtn.disabled = true;
             
-            fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
+            // Create mailto link with form data
+            const emailBody = `Name: ${formData.name}%0AEmail: ${formData.email}%0A%0AMessage:%0A${formData.message}`;
+            const mailtoLink = `mailto:CodeWithMmaphuti@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${emailBody}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
                     // Show success message
-                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Email Client Opened!';
                     submitBtn.style.background = 'linear-gradient(135deg, #cc0000 0%, #ff4444 100%)';
+            
+            // Show info message
+            alert('Your email client should open with the message pre-filled. If it doesn\'t, please send an email to CodeWithMmaphuti@gmail.com manually.');
                     
                     // Reset form
                     contactForm.reset();
@@ -58,25 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         submitBtn.style.background = 'linear-gradient(135deg, #ff4444 0%, #cc0000 100%)';
                         submitBtn.disabled = false;
                     }, 3000);
-                } else {
-                    throw new Error(data.message || 'Failed to send message');
-                }
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                // Show error message
-                submitBtn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error!';
-                submitBtn.style.background = 'linear-gradient(135deg, #ff4444 0%, #cc0000 100%)';
-                
-                alert('Failed to send message. Please try again later.');
-                
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.style.background = 'linear-gradient(135deg, #ff4444 0%, #cc0000 100%)';
-                    submitBtn.disabled = false;
-                }, 3000);
-            });
         });
     }
     

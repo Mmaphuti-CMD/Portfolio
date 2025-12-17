@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Check if this link matches current page
         if (normalizedLink === normalizedCurrent || 
-            (currentSection === 'home' && (linkHref === 'index.html' || linkHref.endsWith('/index.html') || linkHref.endsWith('/'))) {
+            (currentSection === 'home' && (linkHref === 'index.html' || linkHref.endsWith('/index.html') || linkHref.endsWith('/')))) {
             link.classList.add('active');
         } else if (currentSection !== 'home' && 
                    (linkHref.includes(`/${currentSection}/`) || 
