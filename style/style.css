@@ -98,18 +98,19 @@ body{
 .home .home-container .home-info h1{
     font-size: 43px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 0 12px 0;
 }
 
 .home .home-container .home-info h2{
-    font-size: 33;
-    margin-top: -30px;
+    font-size: 33px;
+    margin: 4px 0 18px 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .home .home-container .home-info p{
     font-size: 15px;
-    font-weight: none;
-    margin: 10px 0 25px 0;
+    font-weight: 400;
+    margin: 10px 0 20px 0;
 }
 
 .home .home-container .btn-sci{
