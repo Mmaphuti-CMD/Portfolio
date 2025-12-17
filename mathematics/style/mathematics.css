@@ -297,6 +297,8 @@
 
 .calculator-card.advanced{
     border-color: rgba(255, 77, 77, 0.4);
+    /* Make room so badges don't overlap the heading */
+    padding-top: 72px;
 }
 
 .advanced-badge{
