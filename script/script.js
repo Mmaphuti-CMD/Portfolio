@@ -34,10 +34,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const normalizePath = (path) => path.replace(/\/$/, '').toLowerCase();
         const normalizedLink = normalizePath(fullLinkHref);
         const normalizedCurrent = normalizePath(currentFullPath);
+
+        // Treat bare domain (Netlify root) as home too
+        const isCurrentHome = normalizedCurrent === '' || normalizedCurrent === '/index.html';
+        const isHomeLink = linkHref === 'index.html' || linkHref === './' || linkHref === '/' ||
+                           linkHref.endsWith('/index.html') || linkHref.endsWith('/');
         
         // Check if this link matches current page
         if (normalizedLink === normalizedCurrent || 
-            (currentSection === 'home' && (linkHref === 'index.html' || linkHref.endsWith('/index.html') || linkHref.endsWith('/')))) {
+            ((currentSection === 'home' || isCurrentHome) && isHomeLink)) {
             link.classList.add('active');
         } else if (currentSection !== 'home' && 
                    (linkHref.includes(`/${currentSection}/`) || 
